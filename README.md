@@ -1,2 +1,2 @@
-# portfolio
-Portfolio Website 2026
+# Portfolio
+My personal portfolio website built with HTML and Tailwind CSS
