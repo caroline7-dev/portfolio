@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+      type="module"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sniglet:wght@400;800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@200..900&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-[rgb(22,22,30)]">
+    <!--NAV BAR-->
+    <nav class="select-none sm:pt-2 fixed top-0 left-0 right-0 z-50">
+      <div class="ml-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button
+              type="button"
+              command="--toggle"
+              commandfor="mobile-menu"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500"
+            >
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Open main menu</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                data-slot="icon"
+                aria-hidden="true"
+                class="size-6 in-aria-expanded:hidden"
+              >
+                <path
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                data-slot="icon"
+                aria-hidden="true"
+                class="size-6 not-in-aria-expanded:hidden"
+              >
+                <path
+                  d="M6 18 18 6M6 6l12 12"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end"
+          >
+            <div class="hidden sm:ml-6 sm:block">
+              <div class="flex space-x-4">
+                <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+                <a
+                  href="index.html"
+                  aria-current="page"
+                  class="text-[30px] rounded-md bg-gray-950/50 px-3 py-2 font-medium text-white tracking-wider"
+                  >Home</a
+                >
+                <a
+                  href="gallery.html"
+                  class="text-[30px] rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-white/5 hover:text-white tracking-wider"
+                  >Gallery</a
+                >
+                <a
+                  href="about.html"
+                  class="text-[30px] rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-white/5 hover:text-white tracking-wider"
+                  >About</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+          >
+            <!-- Profile dropdown -->
+          </div>
+        </div>
+      </div>
+
+      <el-disclosure
+        id="mobile-menu"
+        hidden
+        class="block sm:hidden bg-[rgb(22,22,30)]"
+      >
+        <div class="space-y-1 px-2 pt-2 pb-3">
+          <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+          <a
+            href="index.html"
+            aria-current="page"
+            class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white"
+            >Home</a
+          >
+          <a
+            href="gallery.html"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+            >Gallery</a
+          >
+          <a
+            href="about.html"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+            >About</a
+          >
+        </div>
+      </el-disclosure>
+    </nav>
+
+    <!--SLANTED ELEMENTS-->
+    <div
+      class="flex w-full overflow-hidden bg-[rgb(22,22,30)] mt-16 sm:mt-0"
+      style="align-items: flex-start"
+    >
+      <!-- Left panel -->
+      <div
+        class="animate-slide-left relative z-20"
+        style="
+          width: 75vw;
+          max-width: 1400px;
+          margin-top: 30px;
+          margin-left: -125px;
+        "
+      >
+        <div
+          style="
+            background: #2a2a3a;
+            transform: skew(-13deg);
+            transform-origin: bottom left;
+            height: 530px;
+          "
+        >
+          <div
+            class="flex flex-col h-full justify-center gap-2"
+            style="transform: skew(13deg); padding: 1rem 20rem 3rem 7rem"
+          >
+            <div class="card">
+              <div class="logo-5-wrap">
+                <span class="logo-5-c">C</span>
+                <span class="logo-5-r">R</span>
+                <span class="logo-5-l">L</span>
+                <span class="logo-5-n">N</span>
+              </div>
+            </div>
+            <h1 class="font-medium italic text-7xl leading-none text-[#743bec]">
+              Hi, I'm <strong>Caroline!</strong>
+            </h1>
+            <p class="text-[25px] text-white mb-4">
+              I'm a designer and aspiring developer from Germany, passionate
+              about the creative and technical sides of making things. Expanding
+              my skills into Python!
+            </p>
+            <p class="text-[25px] text-white mb-4">
+              In my free time I enjoy learning languages, such as Spanish and
+              dabbling in Chinese!
+            </p>
+            <p class="text-[25px] text-white">
+              This site is my little corner of the internet where I showcase my
+              work. Always a work in progress, so check back as it grows!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right panel -->
+      <div
+        class="animate-slide-right"
+        style="
+          margin-left: auto;
+          width: 60vw;
+          max-width: 1400px;
+          margin-top: 90px;
+          z-index: 30;
+        "
+      >
+        <div
+          style="
+            margin-left: -45px;
+            overflow: hidden;
+            position: relative;
+            height: 550px;
+            background: #fbbf24;
+            width: calc(100% + 100px);
+            transform: translateX(50px) skew(-13deg);
+          "
+        >
+          <img
+            src="selfie.jpg"
+            alt="selfie"
+            style="
+              transform: skew(13deg);
+              width: 100%;
+              height: 248%;
+              object-fit: contain;
+              position: absolute;
+              right: 0;
+              top: 0;
+            "
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
