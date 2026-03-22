@@ -21,9 +21,18 @@
       opacity: 1;
     }
   }
+  @keyframes expand {
+    from {
+      width: 0%;
+    }
+    to {
+      width: calc(100% - 60px);
+    }
+  }
   --animate-slide-left: slide-in-left 2s cubic-bezier(0.16, 1, 0.3, 1) both;
   --animate-slide-right: slide-in-right 2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s
     both;
+  --animate-expand: expand 1.6s cubic-bezier(0, 0.39, 0, 0.99) 0.1s both;
 }
 
 @layer utilities {
@@ -32,6 +41,9 @@
     will-change: transform;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+  }
+  .animate-expand {
+    animation: var(--animate-expand);
   }
 }
 
@@ -75,14 +87,17 @@
 }
 
 .masonry-item img {
-  transition: transform 0.4s ease, filter 0.4s ease;
   filter: brightness(0.85);
   cursor: pointer;
+}
+#accordion-content.open .masonry-item img {
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 .masonry-item img:hover {
   transform: scale(1.05);
   filter: brightness(1);
 }
+
 #lightbox {
   display: none;
   position: fixed;
@@ -103,3 +118,11 @@
   object-fit: contain;
 }
 
+#accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#accordion-content.open {
+  max-height: 400px;
+}

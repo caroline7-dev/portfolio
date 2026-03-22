@@ -8,7 +8,6 @@
       src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
       type="module"
     ></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,10 +15,9 @@
       rel="stylesheet"
     />
   </head>
-
   <body class="select-none bg-[rgb(22,22,30)] m-0">
     <!--NAV BAR-->
-    <nav class="select-none sm:pt-2 fixed top-0 left-0 right-0 z-50">
+    <nav class="select-none sm:pt-2 relative top-0 left-0 right-0 z-50">
       <div class="ml-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -72,18 +70,18 @@
                 <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
                 <a
                   href="index.html"
-                  class="text-[30px] rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-white/5 hover:text-white tracking-wider"
+                  class="text-[30px] rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-white/5 hover:text-white tracking-wider transition-colors duration-300 ease-in-out"
                   >Home</a
                 >
                 <a
                   href="gallery.html"
                   aria-current="page"
-                  class="text-[30px] rounded-md bg-gray-950/50 px-3 py-2 font-medium text-white tracking-wider"
+                  class="text-[30px] rounded-md bg-gray-950/50 px-3 py-2 font-medium text-white tracking-wider transition-colors duration-300 ease-in-out"
                   >Gallery</a
                 >
                 <a
                   href="about.html"
-                  class="text-[30px] rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-white/5 hover:text-white tracking-wider"
+                  class="text-[30px] rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-white/5 hover:text-white tracking-wider transition-colors duration-300 ease-in-out"
                   >About</a
                 >
               </div>
@@ -94,7 +92,6 @@
           ></div>
         </div>
       </div>
-
       <el-disclosure
         id="mobile-menu"
         hidden
@@ -103,118 +100,357 @@
         <div class="space-y-1 px-2 pt-2 pb-3">
           <a
             href="index.html"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-colors duration-300 ease-in-out"
             >Home</a
           >
           <a
             href="gallery.html"
             aria-current="page"
-            class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white"
+            class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white transition-colors duration-300 ease-in-out"
             >Gallery</a
           >
           <a
             href="about.html"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-colors duration-300 ease-in-out"
             >About</a
           >
         </div>
       </el-disclosure>
     </nav>
 
-    <!-- GALLERY -->
-    <div class="w-full overflow-x-hidden">
-      <div class="columns-2 md:columns-4 gap-4 mt-20 w-full">
-        <div class="mb-4 break-inside-avoid">
-          <img
-            class="w-full h-auto rounded-base"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
-            alt=""
-          />
+    <!--SLANTED ELEMENTS-->
+    <div
+      class="flex w-full overflow-hidden bg-[rgb(22,22,30)]"
+      style="align-items: flex-start; margin-top: -80px"
+    >
+      <!-- Left panel -->
+      <div
+        class="animate-slide-left relative z-20"
+        style="
+          width: 75vw;
+          max-width: 1400px;
+          margin-top: 30px;
+          margin-left: -125px;
+        "
+      >
+        <div
+          style="
+            background: #2a2a3a;
+            transform: skew(-13deg);
+            transform-origin: bottom left;
+            height: 430px;
+          "
+        >
+          <!-- Color bar -->
+          <div
+            class="w-full"
+            style="
+              height: 11px;
+              background: linear-gradient(
+                to right,
+                rgb(255, 45, 155),
+                rgb(113, 59, 229),
+                rgb(91, 140, 255),
+                rgb(6, 176, 151)
+              );
+            "
+          ></div>
+          <div
+            class="flex flex-col h-full justify-start gap-2"
+            style="transform: skew(13deg); padding: 1.5rem 20rem 3rem 7rem"
+          >
+            <div class="card">
+              <div class="logo-5-wrap">
+                <span class="logo-5-c">C</span>
+                <span class="logo-5-r">R</span>
+                <span class="logo-5-l">L</span>
+                <span class="logo-5-n">N</span>
+              </div>
+            </div>
+            <h1
+              class="font-medium italic text-7xl leading-none text-[#743bec] mb-4"
+            >
+              <strong>Gallery</strong>
+            </h1>
+            <p class="text-[25px] text-white mb-4">
+              This gallery is an archive of my design journey, capturing every
+              milestone from my very first website layout in 2022 to personal
+              design projects of any kind. Here, you’ll find a diverse
+              collection of posters, banners, and digital interfaces that
+              reflect my growth as a designer and my commitment to evolving with
+              every new brief.
+            </p>
+          </div>
         </div>
-        <div class="mb-4 break-inside-avoid">
+      </div>
+
+      <!-- Right panel -->
+      <div
+        class="animate-slide-right"
+        style="
+          margin-left: auto;
+          width: 60vw;
+          max-width: 1400px;
+          margin-top: 120px;
+          z-index: 30;
+        "
+      >
+        <div
+          style="
+            margin-left: -45px;
+            overflow: hidden;
+            position: relative;
+            height: 450px;
+            background: #fbbf24;
+            width: calc(100% + 100px);
+            transform: translateX(50px) skew(-13deg);
+          "
+        >
           <img
-            class="w-full h-auto rounded-base"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
-            alt=""
-          />
-        </div>
-        <div class="mb-4 break-inside-avoid">
-          <img
-            class="w-full h-auto rounded-base"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
-            alt=""
-          />
-        </div>
-        <div class="mb-4 break-inside-avoid">
-          <img
-            class="w-full h-auto rounded-base"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
-            alt=""
-          />
-        </div>
-        <div class="mb-4 break-inside-avoid">
-          <img
-            class="w-full h-auto rounded-base"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
-            alt=""
-          />
-        </div>
-        <div class="mb-4 break-inside-avoid">
-          <img
-            class="w-full h-auto rounded-base"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
-            alt=""
-          />
-        </div>
-        <div class="mb-4 break-inside-avoid">
-          <img
-            class="w-full h-auto rounded-base"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
-            alt=""
-          />
-        </div>
-        <div class="mb-4 break-inside-avoid">
-          <img
-            class="w-full h-auto rounded-base"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
-            alt=""
-          />
-        </div>
-        <div class="mb-4 break-inside-avoid">
-          <img
-            class="w-full h-auto rounded-base"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
-            alt=""
-          />
-        </div>
-        <div class="mb-4 break-inside-avoid">
-          <img
-            class="w-full h-auto rounded-base"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
-            alt=""
-          />
-        </div>
-        <div class="mb-4 break-inside-avoid">
-          <img
-            class="w-full h-auto rounded-base"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
-            alt=""
-          />
-        </div>
-        <div class="mb-4 break-inside-avoid">
-          <img
-            class="w-full h-auto rounded-base"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg"
-            alt=""
+            src="selfie.jpg"
+            alt="selfie"
+            style="
+              transform: skew(13deg);
+              width: 100%;
+              height: 248%;
+              object-fit: contain;
+              position: absolute;
+              right: 0;
+              top: 0;
+            "
           />
         </div>
       </div>
     </div>
+
+    <!-- Divider-Line -->
+    <div
+      class="animate-expand"
+      style="
+        width: calc(100% - 60px);
+        margin: 20px auto;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.2);
+      "
+    ></div>
+
+    <!-- Accordion -->
+    <div class="mx-auto px-6 mt-8 mb-12" style="max-width: 1350px">
+      <div
+        style="
+          border: 1.5px solid rgba(255, 255, 255, 0.15);
+          border-radius: 12px;
+        "
+      >
+        <button
+          onclick="toggleAccordion()"
+          id="accordion-btn"
+          style="
+            width: 100%;
+            padding: 16px 24px;
+            background: transparent;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            cursor: pointer;
+            display: block;
+            border: none;
+          "
+        >
+          My First Website (Carosite)
+        </button>
+        <div id="accordion-content" style="padding: 0">
+          <div style="padding: 24px 24px 24px 24px">
+            <div class="columns-2 gap-4">
+              <div class="masonry-item mb-4 break-inside-avoid">
+                <img
+                  class="w-full h-auto rounded-lg"
+                  src="project folder (images)/ptf1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="masonry-item mb-4 break-inside-avoid">
+                <img
+                  class="w-full h-auto rounded-lg"
+                  src="project folder (images)/ptf2.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="mx-auto max-w-7xl px-6 pb-8">
+      <div class="flex gap-3 flex-wrap justify-center">
+        <button
+          onclick="filterGallery('beatmap')"
+          id="btn-beatmap"
+          class="filter-btn active-pink"
+          style="
+            padding: 8px 20px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border: 1.5px solid rgb(255, 45, 155);
+            color: rgb(255, 45, 155);
+            background: transparent;
+            transition: all 0.5s ease;
+          "
+        >
+          Beatmap Backgrounds
+        </button>
+        <button
+          onclick="filterGallery('3d')"
+          id="btn-3d"
+          style="
+            padding: 8px 20px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border: 1.5px solid rgb(113, 59, 229);
+            color: rgb(113, 59, 229);
+            background: transparent;
+            transition: all 0.5s ease;
+          "
+        >
+          3D Projects
+        </button>
+        <button
+          onclick="filterGallery('banners')"
+          id="btn-banners"
+          style="
+            padding: 8px 20px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border: 1.5px solid rgb(91, 140, 255);
+            color: rgb(91, 140, 255);
+            background: transparent;
+            transition: all 0.5s ease;
+          "
+        >
+          Banners & Logos
+        </button>
+        <button
+          onclick="filterGallery('posters')"
+          id="btn-posters"
+          style="
+            padding: 8px 20px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border: 1.5px solid rgb(6, 176, 151);
+            color: rgb(6, 176, 151);
+            background: transparent;
+            transition: all 0.5s ease;
+          "
+        >
+          Poster Design
+        </button>
+      </div>
+    </div>
+
+    <!-- GALLERY -->
+    <div class="columns-2 md:columns-4 gap-4">
+      <div class="mb-4 break-inside-avoid">
+        <img
+          class="w-full h-auto rounded-base"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
+          alt=""
+        />
+      </div>
+      <div class="mb-4 break-inside-avoid">
+        <img
+          class="w-full h-auto rounded-base"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
+          alt=""
+        />
+      </div>
+      <div class="mb-4 break-inside-avoid">
+        <img
+          class="w-full h-auto rounded-base"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
+          alt=""
+        />
+      </div>
+      <div class="mb-4 break-inside-avoid">
+        <img
+          class="w-full h-auto rounded-base"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
+          alt=""
+        />
+      </div>
+      <div class="mb-4 break-inside-avoid">
+        <img
+          class="w-full h-auto rounded-base"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
+          alt=""
+        />
+      </div>
+      <div class="mb-4 break-inside-avoid">
+        <img
+          class="w-full h-auto rounded-base"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
+          alt=""
+        />
+      </div>
+      <div class="mb-4 break-inside-avoid">
+        <img
+          class="w-full h-auto rounded-base"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
+          alt=""
+        />
+      </div>
+      <div class="mb-4 break-inside-avoid">
+        <img
+          class="w-full h-auto rounded-base"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
+          alt=""
+        />
+      </div>
+      <div class="mb-4 break-inside-avoid">
+        <img
+          class="w-full h-auto rounded-base"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
+          alt=""
+        />
+      </div>
+      <div class="mb-4 break-inside-avoid">
+        <img
+          class="w-full h-auto rounded-base"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
+          alt=""
+        />
+      </div>
+      <div class="mb-4 break-inside-avoid">
+        <img
+          class="w-full h-auto rounded-base"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
+          alt=""
+        />
+      </div>
+      <div class="mb-4 break-inside-avoid">
+        <img
+          class="w-full h-auto rounded-base"
+          src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
     <!-- Lightbox -->
     <div id="lightbox" onclick="closeLightbox()">
       <img id="lightbox-img" src="" alt="" />
     </div>
-
     <script src="lightbox.js"></script>
+    <script src="filter.js"></script>
   </body>
 </html>

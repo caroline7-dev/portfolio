@@ -28,7 +28,7 @@
               type="button"
               command="--toggle"
               commandfor="mobile-menu"
-              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500 transition-colors duration-300 ease-in-out"
             >
               <span class="absolute -inset-0.5"></span>
               <span class="sr-only">Open main menu</span>
@@ -73,17 +73,17 @@
                 <a
                   href="index.html"
                   aria-current="page"
-                  class="text-[30px] rounded-md bg-gray-950/50 px-3 py-2 font-medium text-white tracking-wider"
+                  class="text-[30px] rounded-md bg-gray-950/50 px-3 py-2 font-medium text-white tracking-wider transition-colors duration-300 ease-in-out"
                   >Home</a
                 >
                 <a
                   href="gallery.html"
-                  class="text-[30px] rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-white/5 hover:text-white tracking-wider"
+                  class="text-[30px] rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-white/5 hover:text-white tracking-wider transition-colors duration-300 ease-in-out"
                   >Gallery</a
                 >
                 <a
                   href="about.html"
-                  class="text-[30px] rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-white/5 hover:text-white tracking-wider"
+                  class="text-[30px] rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-white/5 hover:text-white tracking-wider transition-colors duration-300 ease-in-out"
                   >About</a
                 >
               </div>
@@ -107,17 +107,17 @@
           <a
             href="index.html"
             aria-current="page"
-            class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white"
+            class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white transition-colors duration-300 ease-in-out"
             >Home</a
           >
           <a
             href="gallery.html"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-colors duration-300 ease-in-out"
             >Gallery</a
           >
           <a
             href="about.html"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-colors duration-300 ease-in-out"
             >About</a
           >
         </div>
@@ -126,8 +126,8 @@
 
     <!--SLANTED ELEMENTS-->
     <div
-      class="flex w-full overflow-hidden bg-[rgb(22,22,30)] mt-16 sm:mt-0"
-      style="align-items: flex-start"
+      class="flex w-full overflow-hidden bg-[rgb(22,22,30)]"
+      style="align-items: flex-start; margin-top: -8px;"
     >
       <!-- Left panel -->
       <div
@@ -147,6 +147,21 @@
             height: 530px;
           "
         >
+
+        <!-- Color bar -->
+          <div
+            class="w-full"
+            style="
+              height: 11px;
+              background: linear-gradient(
+                to right,
+                rgb(255, 45, 155),
+                rgb(113, 59, 229),
+                rgb(91, 140, 255),
+                rgb(6, 176, 151)
+              );
+            "
+          ></div>
           <div
             class="flex flex-col h-full justify-center gap-2"
             style="transform: skew(13deg); padding: 1rem 20rem 3rem 7rem"
@@ -159,21 +174,25 @@
                 <span class="logo-5-n">N</span>
               </div>
             </div>
-            <h1 class="font-medium italic text-7xl leading-none text-[#743bec]">
+            <h1
+              class="font-medium italic text-7xl leading-none text-[#743bec] mb-4"
+            >
               Hi, I'm <strong>Caroline!</strong>
             </h1>
             <p class="text-[25px] text-white mb-4">
               I'm a designer and aspiring developer from Germany, passionate
-              about the creative and technical sides of making things. Expanding
-              my skills into Python!
+              about the creative and technical sides of making things. I also
+              wanna get more into back-end in the future.
             </p>
             <p class="text-[25px] text-white mb-4">
               In my free time I enjoy learning languages, such as Spanish and
-              dabbling in Chinese!
+              dabbling in Chinese pronunciation! I'm also into photography,
+              enjoying walks outside and much more!!!
             </p>
             <p class="text-[25px] text-white">
               This site is my little corner of the internet where I showcase my
-              work. Always a work in progress, so check back as it grows!
+              work. It will likely stay in a 'work in progress' status, so check
+              it out again as it grows!
             </p>
           </div>
         </div>
