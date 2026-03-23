@@ -1,0 +1,52 @@
+/* =============================================
+   Responsive overrides for screens <= 1920px
+   (designed on 2560x1440, scaling down)
+   ============================================= */
+
+   @media (max-width: 1920px) {
+    /* NAV */
+    .nav-link {
+      font-size: 20px !important;
+    }
+  
+    /* LOGO */
+    .logo-5-c,
+    .logo-5-r,
+    .logo-5-l,
+    .logo-5-n {
+      font-size: 68px !important;
+    }
+  
+    /* LEFT PANEL */
+    .left-panel-inner {
+      height: 420px !important;
+    }
+  
+    .left-panel-content {
+      padding: 1rem 6rem 2rem 5rem !important;
+    }
+  
+    .left-panel-content h1 {
+      font-size: 20px !important;
+      margin-bottom: 0.5rem !important;
+    }
+  
+    .left-panel-content p {
+      font-size: 20px !important;
+      margin-bottom: 0.5rem !important;
+    }
+  
+    /* RIGHT PANEL */
+    .right-panel-box {
+      height: 420px !important;
+      margin-top: 60px !important;
+    }
+  
+    .selfie-img {
+      top: -100px !important;
+      height: 150% !important;
+      object-fit: cover !important;
+      object-position: top center !important;
+    }
+  }
+  
