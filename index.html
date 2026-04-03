@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caroline | Portfolio</title>
     <link href="./output.css" rel="stylesheet" />
-    <link href="./responsive.css" rel="stylesheet" />
 
     <script
       src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
@@ -23,7 +22,7 @@
   <body class="bg-[rgb(22,22,30)] overflow-x-hidden">
     <!--NAV BAR-->
     <nav class="select-none sm:pt-2 fixed top-0 left-0 right-0 z-50">
-      <div class="w-full px-2 sm:px-6 lg:px-8">
+      <div class="w-full px-2 sm:px-6 pl:px-8S">
         <div class="relative flex h-16 items-center justify-between">
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <!-- Mobile menu button-->
@@ -57,17 +56,17 @@
                 <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
                 <a
                   href="index.html"
-                  class="text-xl 2xl:text-[30px] rounded-md bg-gray-950/50 px-3 py-2 font-medium text-white tracking-wider transition-colors duration-300 ease-in-out"
+                  class="text-xl lg:text-[25px] 2xl:text-[30px] rounded-md bg-gray-950/50 px-3 py-2 font-medium text-white tracking-wider transition-colors duration-300 ease-in-out"
                   >Home</a
                 >
                 <a
                   href="gallery.html"
-                  class="text-xl 2xl:text-[30px] rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-white/5 hover:text-white tracking-wider transition-colors duration-300 ease-in-out"
+                  class="text-xl lg:text-[25px] 2xl:text-[30px] rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-white/5 hover:text-white tracking-wider transition-colors duration-300 ease-in-out"
                   >Gallery</a
                 >
                 <a
                   href="about.html"
-                  class="text-xl 2xl:text-[30px] rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-white/5 hover:text-white tracking-wider transition-colors duration-300 ease-in-out"
+                  class="text-xl lg:text-[25px] 2xl:text-[30px] rounded-md px-3 py-2 font-medium text-gray-300 hover:bg-white/5 hover:text-white tracking-wider transition-colors duration-300 ease-in-out"
                   >About</a
                 >
               </div>
@@ -112,7 +111,7 @@
         class="animate-slide-left relative z-20 w-full lg:w-[75vw] lg:max-w-350 lg:mt-16 lg:-ml-30"
       >
         <div
-          class="bg-[#2a2a3a] lg:h-105 lg:-skew-x-10 origin-bottom-left pb-12 lg:pb-0"
+          class="bg-[#2a2a3a] lg:min-h-140 lg:-skew-x-10 origin-bottom-left pb-12 lg:pb-0"
         >
           <!-- Color bar -->
           <div
@@ -120,9 +119,11 @@
           ></div>
 
           <div
-            class="flex flex-col h-full justify-center gap-2 p-8 pt-14 lg:skew-x-10 lg:p-0 lg:pt-8 lg:pb-6 lg:pl-28 lg:pr-10"
+            class="flex flex-col h-full justify-center gap-2 p-8 pt-14 lg:skew-x-10 lg:p-0 lg:pt-8 lg:pb-6 lg:pl-28 lg:pr-15"
           >
-            <div class="logo-5-wrap scale-90 lg:scale-100 origin-left">
+            <div
+              class="logo-5-wrap scale-90 lg:scale-100 xl:scale-110 2xl:scale-120 origin-left"
+            >
               <span class="logo-5-c">C</span>
               <span class="logo-5-r">R</span>
               <span class="logo-5-l">L</span>
@@ -130,13 +131,13 @@
             </div>
 
             <h1
-              class="font-medium italic text-5xl md:text-6xl lg:text-6xl leading-tight text-[#743bec]"
+              class="font-medium italic text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl leading-tight text-[#743bec] lg:whitespace-nowrap"
             >
               Hi, I'm <strong>Caroline!</strong>
             </h1>
 
             <div
-              class="text-lg md:text-xl lg:text-[18px] text-white space-y-4 max-w-3xl lg:pb-10"
+              class="text-lg md:text-xl lg:text-[22px] xl:text-[24px] 2xl:text-[26px] text-white space-y-4 max-w-3xl lg:pb-5 lg:pr-20"
             >
               <p>
                 I'm a designer and aspiring developer from Germany, passionate
@@ -162,7 +163,7 @@
         class="animate-slide-right w-full lg:w-[60vw] lg:max-w-350 mt-0 lg:mt-22.5 ml-auto z-30"
       >
         <div
-          class="relative h-125 lg:h-105 bg-[#fbbf24] w-full lg:w-[calc(100%+100px)] lg:-ml-11.25 lg:translate-x-12.5 lg:-skew-x-10 overflow-hidden"
+          class="relative h-125 lg:min-h-165 xl:min-h-165 2xl:min-h-172 bg-[#fbbf24] w-full lg:w-[calc(100%+100px)] lg:-ml-11.25 lg:translate-x-12.5 lg:-skew-x-10 overflow-hidden"
         >
           <img
             src="selfie.jpg"
